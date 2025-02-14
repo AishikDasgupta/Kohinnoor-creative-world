@@ -10,7 +10,7 @@ import { BiMusic } from 'react-icons/bi'
 
 export function Hero() {
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-[90vh]">
       {/* Gradient background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-[#f3276b] to-[#ffff00]" />
