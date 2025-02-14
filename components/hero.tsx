@@ -43,23 +43,23 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Floating icons with reduced opacity */}
+      {/* Floating icons */}
       <div className="absolute inset-0 pointer-events-none">
-        <GiKite className="text-white/30 text-4xl absolute top-10 left-[10%] animate-bounce" />
-        <FaDrum className="text-white/30 text-4xl absolute top-20 right-[15%] animate-bounce delay-100" />
-        <GiDramaMasks className="text-white/30 text-4xl absolute top-32 left-[25%] animate-pulse delay-200" />
-        <FaFilm className="text-white/30 text-3xl absolute top-16 right-[35%] animate-bounce delay-300" />
-        <GiPuppet className="text-[#ffb516] text-4xl absolute bottom-32 left-[40%] animate-pulse delay-150" />
-        <FaGuitar className="text-white/30 text-3xl absolute bottom-24 right-[40%] animate-bounce delay-200" />
-        <GiIndianPalace className="text-[#ffb516] text-4xl absolute top-[50%] left-[15%] animate-pulse delay-250" />
-        <MdTheaterComedy className="text-white/30 text-3xl absolute top-28 left-[45%] animate-bounce delay-150" />
-        <FaStar className="text-[#ffb516] text-3xl absolute bottom-20 left-[20%] animate-pulse" />
-        <FaMusic className="text-[#ffb516] text-3xl absolute bottom-10 right-[25%] animate-pulse delay-150" />
-        <GiFeather className="text-white/30 text-4xl absolute top-24 right-[50%] animate-bounce delay-200" />
-        <BiMusic className="text-[#ffb516] text-4xl absolute bottom-28 right-[18%] animate-pulse delay-300" />
-        <GiTurban className="text-white/30 text-4xl absolute bottom-36 right-[32%] animate-bounce delay-225" />
-        <SiYoutubeshorts className="text-[#ffb516] text-3xl absolute top-36 right-[22%] animate-pulse delay-275" />
-        <BsCameraReelsFill className="text-white/30 text-3xl absolute bottom-12 left-[32%] animate-bounce delay-325" />
+        <GiKite className="text-white text-4xl absolute top-10 left-[10%] animate-bounce" />
+        <FaDrum className="text-white text-4xl absolute top-20 right-[15%] animate-bounce delay-100" />
+        <GiDramaMasks className="text-white text-4xl absolute top-32 left-[25%] animate-pulse delay-200" />
+        <FaFilm className="text-white text-3xl absolute top-16 right-[35%] animate-bounce delay-300" />
+        <GiPuppet className="text-white text-4xl absolute bottom-32 left-[40%] animate-pulse delay-150" />
+        <FaGuitar className="text-white text-3xl absolute bottom-24 right-[40%] animate-bounce delay-200" />
+        <GiIndianPalace className="text-white text-4xl absolute top-[50%] left-[15%] animate-pulse delay-250" />
+        <MdTheaterComedy className="text-white text-3xl absolute top-28 left-[45%] animate-bounce delay-150" />
+        <FaStar className="text-white text-3xl absolute bottom-20 left-[20%] animate-pulse" />
+        <FaMusic className="text-white text-3xl absolute bottom-10 right-[25%] animate-pulse delay-150" />
+        <GiFeather className="text-white text-4xl absolute top-24 right-[50%] animate-bounce delay-200" />
+        <BiMusic className="text-white text-4xl absolute bottom-28 right-[18%] animate-pulse delay-300" />
+        <GiTurban className="text-white text-4xl absolute bottom-36 right-[32%] animate-bounce delay-225" />
+        <SiYoutubeshorts className="text-white text-3xl absolute top-36 right-[22%] animate-pulse delay-275" />
+        <BsCameraReelsFill className="text-white text-3xl absolute bottom-12 left-[32%] animate-bounce delay-325" />
       </div>
     </div>
   )
