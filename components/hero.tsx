@@ -13,7 +13,7 @@ export function Hero() {
     <div className="relative min-h-[90vh]">
       {/* Gradient background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#f3276b] to-[#ffff00]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#f3276b] via-[#f3276b] to-[#e7e73c]" />
       </div>
 
       {/* Content */}
@@ -21,7 +21,6 @@ export function Hero() {
         <div className="max-w-4xl mx-auto px-4 md:px-6">
           <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-[#ffca1c] to-[#ebc419]">
             Celebrating Haryanvi Art & Culture
-            <span className="inline-block animate-bounce delay-200 ml-2">🎨</span>
           </h1>
           <p className="text-white text-lg md:text-xl mb-8 leading-relaxed">
             Our Rich Heritage, Folk Arts, and Traditions - A Unique Cultural Experience
