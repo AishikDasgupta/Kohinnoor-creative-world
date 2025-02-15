@@ -25,7 +25,7 @@ export function Hero() {
         <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-[#FAD10A] to-[#ebc419] mt-4 sm:mt-12">
           Celebrating Haryanvi Art & Culture
         </h1>
-        <p className="text-white text-lg sm:text-xl mb-12 sm:mb-16 leading-relaxed mt-2 sm:mt-6">
+        <p className="text-white text-lg sm:text-xl mb-14 sm:mb-8 leading-relaxed mt-2 sm:mt-6">
           Our Rich Heritage, Arts, and Traditions - A Unique Cultural Experience
           <span className="inline-block animate-bounce delay-300 ml-2">✨</span>
         </p>
