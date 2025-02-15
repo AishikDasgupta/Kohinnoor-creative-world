@@ -28,7 +28,7 @@ export function ImageSection({ heading, subheading, content, imageUrl, imageLeft
 
   return (
     <div id={id} ref={ref} className="mx-auto px-4 md:px-6 py-16 md:py-24">
-      <div className="rounded-lg flex flex-col md:flex-row gap-8 md:gap-16 items-center bg-gradient-to-br from-[#803093] to-[#FAD10A]">
+      <div className="rounded-lg flex flex-col md:flex-row gap-8 md:gap-16 items-center">
         {imageLeft ? (
           <>
             <motion.div 
@@ -74,8 +74,8 @@ export function ImageSection({ heading, subheading, content, imageUrl, imageLeft
               transition={{ duration: 0.5 }}
             >
               <h2 className="text-2xl md:text-3xl font-bold text-[#1e1e1e] mb-2 text-center">{heading}</h2>
-              <p className="text-[#FAD10A] font-medium text-base md:text-lg text-center">{subheading}</p>
-              <p className="text-gray-800 leading-relaxed text-base md:text-lg text-justify">{content}</p>
+              <p className="text-[#803093] font-medium text-base md:text-lg text-center">{subheading}</p>
+              <p className="text-gray-800 leading-relaxed md:text-lg text-base">{content}</p>
             </motion.div>
             <motion.div 
               className="w-full md:w-1/2"
