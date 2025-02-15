@@ -25,13 +25,13 @@ export function Hero() {
         <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-[#FAD10A] to-[#ebc419]">
           Celebrating Haryanvi Art & Culture
         </h1>
-        <p className="text-white text-lg sm:text-xl mb-8 leading-relaxed">
+        <p className="text-white text-lg sm:text-xl mb-12 sm:mb-16 leading-relaxed">
           Our Rich Heritage, Arts, and Traditions - A Unique Cultural Experience
           <span className="inline-block animate-bounce delay-300 ml-2">✨</span>
         </p>
 
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full">
+        <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 justify-center items-center w-full">
           <Button
             className="bg-white text-[#ff1c1c] hover:bg-gray-100 text-lg px-6 py-4 sm:px-8 sm:py-6 w-full sm:w-auto group transition-transform hover:scale-105"
             onClick={() => document.getElementById("programs")?.scrollIntoView({ behavior: "smooth" })}
