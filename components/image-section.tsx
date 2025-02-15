@@ -39,7 +39,7 @@ export function ImageSection({ heading, subheading, content, imageUrl, imageLeft
                 visible: { opacity: 1, x: 0 },
                 hidden: { opacity: 0, x: -20 }
               }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.1 }}
             >
               <div 
                 className={`rounded-xl overflow-hidden shadow-xl aspect-square w-full bg-cover bg-center scale-100 transform hover:scale-105 transition-transform duration-300 ${imageClassName}`}
@@ -54,7 +54,7 @@ export function ImageSection({ heading, subheading, content, imageUrl, imageLeft
                 visible: { opacity: 1, x: 0 },
                 hidden: { opacity: 0, x: 20 }
               }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              transition={{ duration: 0.1, delay: 0.05 }}
             >
               <h2 className="text-2xl md:text-3xl font-bold text-[black] mb-2">{heading}</h2>
               <p className="text-[#803093] font-medium text-base md:text-lg">{subheading}</p>
@@ -71,7 +71,7 @@ export function ImageSection({ heading, subheading, content, imageUrl, imageLeft
                 visible: { opacity: 1, x: 0 },
                 hidden: { opacity: 0, x: -20 }
               }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.1 }}
             >
               <h2 className="text-2xl md:text-3xl font-bold text-[#1e1e1e] mb-2 text-center">{heading}</h2>
               <p className="text-[#803093] font-medium text-base md:text-lg text-center">{subheading}</p>
@@ -85,7 +85,7 @@ export function ImageSection({ heading, subheading, content, imageUrl, imageLeft
                 visible: { opacity: 1, x: 0 },
                 hidden: { opacity: 0, x: 20 }
               }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              transition={{ duration: 0.1, delay: 0.05 }}
             >
               <div 
                 className={`rounded-xl overflow-hidden shadow-xl aspect-square w-full bg-cover bg-center scale-100 transform hover:scale-105 transition-transform duration-300 ${imageClassName}`}
