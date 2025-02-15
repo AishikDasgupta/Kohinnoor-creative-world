@@ -64,7 +64,7 @@ export function GridLayout() {
             }}
             transition={{ duration: 0.5 }}
           >
-            Glimpses of Haryanvi Art
+            Our Programs
           </motion.h1>
           <motion.p 
             className="text-lg md:text-xl text-[#767676]"
@@ -74,9 +74,9 @@ export function GridLayout() {
               visible: { opacity: 1 },
               hidden: { opacity: 0 }
             }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
           >
-            A showcase of our rich cultural heritage
+            Explore the diverse cultural programs that celebrate the art and heritage of Haryana.
           </motion.p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">

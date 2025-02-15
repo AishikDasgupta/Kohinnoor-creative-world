@@ -8,6 +8,10 @@ import { SiYoutubeshorts } from 'react-icons/si'
 import { BsCameraReelsFill } from 'react-icons/bs'
 import { BiMusic } from 'react-icons/bi'
 
+const handleContactUsClick = () => {
+  window.location.href = "https://www.publicgoods.com/pages/contact";
+};
+
 export function Hero() {
   return (
     <div className="relative min-h-[90vh]">
@@ -23,19 +27,23 @@ export function Hero() {
             Celebrating Haryanvi Art & Culture
           </h1>
           <p className="text-white text-lg md:text-xl mb-8 leading-relaxed">
-            Our Rich Heritage, Folk Arts, and Traditions - A Unique Cultural Experience
+            Our Rich Heritage, Arts, and Traditions - A Unique Cultural Experience
             <span className="inline-block animate-bounce delay-300 ml-2">✨</span>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button className="bg-white text-[#ff1c1c] hover:bg-gray-100 text-lg px-8 py-6 w-full sm:w-auto group transition-transform hover:scale-105">
-              View Events
+            <Button 
+              className="bg-white text-[#ff1c1c] hover:bg-gray-100 text-lg px-8 py-6 w-full sm:w-auto group transition-transform hover:scale-105"
+              onClick={() => document.getElementById('programs')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              View Programs
               <span className="inline-block ml-2 group-hover:rotate-12 transition-transform">🎪</span>
             </Button>
             <Button 
               variant="outline" 
               className="bg-transparent text-white border-white hover:bg-white/20 text-lg px-8 py-6 w-full sm:w-auto group transition-transform hover:scale-105"
+              onClick={handleContactUsClick}
             >
-              Learn More
+              Join Us
               <span className="inline-block ml-2 group-hover:rotate-12 transition-transform">🎭</span>
             </Button>
           </div>

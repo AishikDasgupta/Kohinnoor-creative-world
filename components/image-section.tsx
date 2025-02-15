@@ -27,7 +27,7 @@ export function ImageSection({ heading, subheading, content, imageUrl, imageLeft
   }, [controls, inView])
 
   return (
-    <div id={id} ref={ref} className="mx-auto px-4 md:px-6 py-16 md:py-24">
+    <div id={id}ref={ref} className="mx-auto px-4 md:px-6 py-16 md:py-24">
       <div className="rounded-lg flex flex-col md:flex-row gap-8 md:gap-16 items-center">
         {imageLeft ? (
           <>
@@ -54,7 +54,7 @@ export function ImageSection({ heading, subheading, content, imageUrl, imageLeft
                 visible: { opacity: 1, x: 0 },
                 hidden: { opacity: 0, x: 20 }
               }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
             >
               <h2 className="text-2xl md:text-3xl font-bold text-[black] mb-2">{heading}</h2>
               <p className="text-[#803093] font-medium text-base md:text-lg">{subheading}</p>
@@ -85,7 +85,7 @@ export function ImageSection({ heading, subheading, content, imageUrl, imageLeft
                 visible: { opacity: 1, x: 0 },
                 hidden: { opacity: 0, x: 20 }
               }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
             >
               <div 
                 className={`rounded-xl overflow-hidden shadow-xl aspect-square w-full bg-cover bg-center scale-100 transform hover:scale-105 transition-transform duration-300 ${imageClassName}`}

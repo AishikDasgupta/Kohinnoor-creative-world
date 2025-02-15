@@ -13,10 +13,11 @@ export default function Page() {
       <ImageSection
         heading="Our Mission"
         subheading="Preserving and Promoting Haryanvi Culture"
-        content="At Kala Haryana, our mission is to preserve, promote, and celebrate the rich cultural heritage of Haryana. We strive to create a vibrant platform that connects artists, performers, and cultural enthusiasts, fostering an environment where traditional art forms can flourish alongside contemporary expressions. Through events, workshops, and digital initiatives, we aim to make Haryanvi art and culture accessible to both local communities and global audiences."
+        content="At Kohinoor Creative World, our mission is to preserve, promote, and celebrate the rich cultural heritage of Haryana. We strive to create a vibrant platform that connects artists, performers, and cultural enthusiasts, fostering an environment where traditional art forms can flourish alongside contemporary expressions. Through events, workshops, and digital initiatives, we aim to make Haryanvi art and culture accessible to both local communities and global audiences."
         imageUrl="https://thumbs.dreamstime.com/b/haryanvi-dance-8738687.jpg?w=768"
         imageLeft={true}
         imageClassName="custom-image-height"
+        id="mission"
       />
       <ImageSection
         heading="Our Vision"
@@ -25,6 +26,7 @@ export default function Page() {
         imageUrl="https://thumbs.dreamstime.com/b/folk-music-dance-snake-charmers-haryana-india-was-shot-th-chandigarh-national-crafts-mela-kakagram-chandigarh-88681223.jpg?w=1400"
         imageLeft={false}
         imageClassName="custom-image-height"
+        id="vision"
       />
       <GridLayout />
       <Footer />

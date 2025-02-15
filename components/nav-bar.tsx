@@ -12,11 +12,17 @@ export function NavBar() {
 
   const navItems = [
     { href: "/", label: "Home" },
-    { href: "#about", label: "About Us" },
-    { href: "#programs", label: "Programs" }]
+    { href: "#programs", label: "Programs" },
+    { href: "#mission", label: "Mission" },
+    { href: "#vision", label: "Vision" },
+  ]
+
+  const handleContactUsClick = () => {
+    window.location.href = "https://www.publicgoods.com/pages/contact";
+  };
 
   return (
-    <nav className="relative bg-white border-b-2 border-[#ff1c64]/20">
+    <nav className="sticky top-0 z-50 bg-white border-b-2 border-[#803093]/20">
       <div className="flex items-center justify-between px-4 md:px-6 py-4">
         <Link href="/" className="flex items-center gap-2">
           <Image src={logo} alt="Kohinnoor creative world" width={124} height={64} />
@@ -29,7 +35,10 @@ export function NavBar() {
               {item.label}
             </Link>
           ))}
-          <Button className="bg-[#803093] text-white hover:bg-[#FAD10A]/90">
+          <Button 
+            className="bg-[#803093] text-white hover:bg-[#FAD10A]/90"
+            onClick={handleContactUsClick}
+          >
             Contact Us
           </Button>
         </div>
