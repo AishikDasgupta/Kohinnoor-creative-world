@@ -62,7 +62,7 @@ export function GridLayout() {
               visible: { opacity: 1, y: 0 },
               hidden: { opacity: 0, y: -20 }
             }}
-            transition={{ duration: 0.1 }}
+            transition={{ duration: 0.5 }}
           >
             Our Programs
           </motion.h1>
@@ -74,7 +74,7 @@ export function GridLayout() {
               visible: { opacity: 1 },
               hidden: { opacity: 0 }
             }}
-            transition={{ duration: 0.1, delay: 0.05 }}
+            transition={{ duration: 0.5, delay: 0.05 }}
           >
             Explore the diverse cultural programs that celebrate the art and heritage of Haryana.
           </motion.p>
@@ -89,7 +89,7 @@ export function GridLayout() {
                 visible: { opacity: 1, y: 0 },
                 hidden: { opacity: 0, y: 20 }
               }}
-              transition={{ duration: 0.1, delay: index * 0.05 }}
+              transition={{ duration: 0.5, delay: index * 0.05 }}
             >
               <Card className="bg-white shadow-xl hover:shadow-2xl transition-shadow duration-300">
                 <CardContent className="p-0">
