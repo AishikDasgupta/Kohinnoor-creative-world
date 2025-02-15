@@ -14,7 +14,7 @@ const handleContactUsClick = () => {
 
 export function Hero() {
   return (
-    <div className="relative h-[70vh] sm:h-[90vh] flex flex-col justify-center items-center text-center px-4 sm:px-6">
+    <div className="relative h-[80vh] sm:h-[90vh] flex flex-col justify-center items-center text-center px-4 sm:px-6">
       {/* Solid Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[#803093]" />
