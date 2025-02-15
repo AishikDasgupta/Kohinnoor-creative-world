@@ -6,7 +6,7 @@ import { useInView } from "react-intersection-observer"
 
 interface ImageSectionProps {
   heading: string;
-  subheading: string;
+  subheading?: string;
   content: string;
   imageUrl: string;
   imageLeft?: boolean;
