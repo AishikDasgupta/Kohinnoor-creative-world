@@ -39,7 +39,7 @@ export function NavBar() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm font-medium hover:text-[#803093] "
+              className="text-sm font-medium hover:text-[#803093]"
             >
               {item.label}
             </Link>
