@@ -11,15 +11,15 @@ import { BiMusic } from 'react-icons/bi'
 export function Hero() {
   return (
     <div className="relative min-h-[90vh]">
-      {/* Gradient background */}
+      {/* Solid background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#f3276b] via-[#f3276b] to-[#e7e73c]" />
+        <div className="absolute inset-0 bg-[#803093]" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 pt-16 md:pt-32 text-center">
         <div className="max-w-4xl mx-auto px-4 md:px-6">
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-[#faca2c] to-[#ebc419]">
+          <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-[#FAD10A] to-[#ebc419]">
             Celebrating Haryanvi Art & Culture
           </h1>
           <p className="text-white text-lg md:text-xl mb-8 leading-relaxed">

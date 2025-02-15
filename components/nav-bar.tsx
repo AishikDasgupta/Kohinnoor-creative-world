@@ -2,8 +2,10 @@
 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Flower2, Menu, X } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { useState } from "react"
+import Image from "next/image"
+import logo from "public/KohinnoorCreativeWorld.png"
 
 export function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -11,27 +13,24 @@ export function NavBar() {
   const navItems = [
     { href: "/", label: "Home" },
     { href: "#about", label: "About Us" },
-    { href: "#programs", label: "Programs" },
-    { href: "#footer", label: "Contact" },
-  ]
+    { href: "#programs", label: "Programs" }]
 
   return (
     <nav className="relative bg-white border-b-2 border-[#ff1c64]/20">
       <div className="flex items-center justify-between px-4 md:px-6 py-4">
-        <Link href="/" className="text-xl md:text-2xl font-bold flex items-center gap-2 text-[#ff1c64]">
-          <Flower2 className="h-6 w-6 md:h-8 md:w-8" />
-          <span>Kala Haryana</span>
+        <Link href="/" className="flex items-center gap-2">
+          <Image src={logo} alt="Kohinnoor creative world" width={124} height={64} />
         </Link>
         
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
-            <Link key={item.href} href={item.href} className="text-sm hover:text-[#ff1c64] font-medium">
+            <Link key={item.href} href={item.href} className="text-sm hover:text-[#803093] font-medium">
               {item.label}
             </Link>
           ))}
-          <Button className="bg-[#ff1c64] text-white hover:bg-[#ff1c64]/90">
-            Book Tickets
+          <Button className="bg-[#803093] text-white hover:bg-[#FAD10A]/90">
+            Contact Us
           </Button>
         </div>
 
@@ -41,9 +40,9 @@ export function NavBar() {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? (
-            <X className="h-6 w-6 text-[#ff1c64]" />
+            <X className="h-6 w-6 text-[#803093]" />
           ) : (
-            <Menu className="h-6 w-6 text-[#ff1c64]" />
+            <Menu className="h-6 w-6 text-[#803093]" />
           )}
         </button>
       </div>
@@ -56,14 +55,14 @@ export function NavBar() {
               <Link 
                 key={item.href} 
                 href={item.href} 
-                className="text-sm hover:text-[#ff1c64] font-medium py-2 block"
+                className="text-sm hover:text-[#803093] font-medium py-2 block"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}
               </Link>
             ))}
             <Button 
-              className="bg-[#ff1c64] text-white hover:bg-[#ff1c64]/90 w-full"
+              className="bg-[#803093] text-white hover:bg-[#803093]/90 w-full"
               onClick={() => setIsMenuOpen(false)}
             >
               Book Tickets

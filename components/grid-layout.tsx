@@ -51,7 +51,7 @@ export function GridLayout() {
   ]
 
   return (
-    <div id="programs" ref={ref} className="bg-gradient-to-b from-[#faf455] to-[#fff5b5] px-4 md:px-6 py-16 md:py-24">
+    <div id="programs" ref={ref} className="bg-gradient-to-b from-[#FAD10A] to-[#ecd01b] px-4 md:px-6 py-16 md:py-24">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 md:mb-16">
           <motion.h1 

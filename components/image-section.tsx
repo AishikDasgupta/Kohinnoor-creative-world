@@ -28,7 +28,7 @@ export function ImageSection({ heading, subheading, content, imageUrl, imageLeft
 
   return (
     <div id={id} ref={ref} className="mx-auto px-4 md:px-6 py-16 md:py-24">
-      <div className="rounded-lg flex flex-col md:flex-row gap-8 md:gap-16 items-center bg-gradient-to-br from-[#f3276b] via-[#f3276b] to-[#e7e73c]">
+      <div className="rounded-lg flex flex-col md:flex-row gap-8 md:gap-16 items-center bg-gradient-to-br from-[#803093] to-[#FAD10A]">
         {imageLeft ? (
           <>
             <motion.div 
@@ -47,7 +47,7 @@ export function ImageSection({ heading, subheading, content, imageUrl, imageLeft
               />
             </motion.div>
             <motion.div 
-              className="w-full md:w-1/2 space-y-4 md:space-y-6 px-4 md:px-0"
+              className="w-full md:w-1/2 space-y-4 md:space-y-6 px-4 md:px-0 text-center"
               initial="hidden"
               animate={controls}
               variants={{
@@ -56,15 +56,15 @@ export function ImageSection({ heading, subheading, content, imageUrl, imageLeft
               }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <h2 className="text-2xl md:text-3xl font-bold text-[#1e1e1e] mb-2">{heading}</h2>
-              <p className="text-[#e7e73c] font-medium text-base md:text-lg">{subheading}</p>
-              <p className="text-gray-600 leading-relaxed text-base md:text-lg">{content}</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-[black] mb-2">{heading}</h2>
+              <p className="text-[#803093] font-medium text-base md:text-lg">{subheading}</p>
+              <p className="text-gray-800 leading-relaxed text-base md:text-lg">{content}</p>
             </motion.div>
           </>
         ) : (
           <>
             <motion.div 
-              className="w-full md:w-1/2 space-y-4 md:space-y-6 px-4 md:px-0"
+              className="w-full md:w-1/2 space-y-4 md:space-y-6 px-4 md:px-0 text-center"
               initial="hidden"
               animate={controls}
               variants={{
@@ -74,7 +74,7 @@ export function ImageSection({ heading, subheading, content, imageUrl, imageLeft
               transition={{ duration: 0.5 }}
             >
               <h2 className="text-2xl md:text-3xl font-bold text-[#1e1e1e] mb-2 text-center">{heading}</h2>
-              <p className="text-[#e7e73c] font-medium text-base md:text-lg text-center">{subheading}</p>
+              <p className="text-[#FAD10A] font-medium text-base md:text-lg text-center">{subheading}</p>
               <p className="text-gray-800 leading-relaxed text-base md:text-lg text-justify">{content}</p>
             </motion.div>
             <motion.div 
