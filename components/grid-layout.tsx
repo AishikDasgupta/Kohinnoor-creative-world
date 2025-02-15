@@ -1,62 +1,114 @@
 "use client"
 
 import { Card, CardContent } from "@/components/ui/card"
+import { motion, useAnimation } from "framer-motion"
+import { useEffect } from "react"
+import { useInView } from "react-intersection-observer"
 
 export function GridLayout() {
+  const controls = useAnimation()
+  const [ref, inView] = useInView({ triggerOnce: false })
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible")
+    } else {
+      controls.start("hidden")
+    }
+  }, [controls, inView])
+
   const cards = [
     {
-      title: "Festival of Phagan",
-      content: "Holi festival in Haryana is celebrated with great enthusiasm. The festival of colors and folk songs symbolizes social unity and cultural harmony.",
-      image: "https://images.unsplash.com/photo-1615630799526-77e2d86399a9?q=80&w=2070"
+      title: "Music",
+      content: "Haryanvi music is a blend of traditional and contemporary styles. It includes folk songs, classical music, and modern tunes that reflect the vibrant culture of Haryana.",
+      image: "https://img.freepik.com/free-vector/colorful-maracas-musical-notes_1308-177271.jpg?ga=GA1.1.622402169.1739605743&semt=ais_hybrid"
     },
     {
-      title: "Folk Dance",
+      title: "Dance",
       content: "Haryanvi folk dances like Dhamal, Khoria, and Gugga are known for their rhythmic patterns and vibrant energy. These dances are the identity of our culture.",
-      image: "https://images.unsplash.com/photo-1583097090817-5fc7f8564030?q=80&w=2070"
+      image: "https://img.freepik.com/premium-vector/elegant-illustration-indian-classical-dancer-vibrant-costume-gracefully-capturing-tra_1151527-11748.jpg?ga=GA1.1.622402169.1739605743&semt=ais_hybrid"
     },
     {
-      title: "Traditional Attire",
+      title: "Art",
       content: "Ghagra-Choli, Kurta-Pajama, and Phulkari embroidery are distinctive features of Haryanvi attire. They reflect the richness of our art and craftsmanship.",
-      image: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=2070"
+      image: "https://img.freepik.com/premium-photo/painting-woman-sitting-tree-with-flock-birds-background_792070-869.jpg?ga=GA1.1.622402169.1739605743&semt=ais_hybrid"
     },
     {
-      title: "Folk Music",
-      content: "Ragini, Saang, and Bhajan are integral parts of Haryanvi folk music. These songs reflect various aspects of society and cultural values.",
-      image: "https://images.unsplash.com/photo-1516307018167-f4e465d5f93f?q=80&w=2069"
+      title: "Theatre",
+      content: "Swang, Nautanki, and Rasleela are popular forms of Haryanvi theatre. These performances entertain the audience about social issues and cultural values.",
+      image: "https://img.freepik.com/free-photo/young-kids-performing-play-theatre-stage-celebrate-world-theatre-day_23-2151163714.jpg?ga=GA1.1.622402169.1739605743&semt=ais_hybrid"
     },
     {
-      title: "Traditional Cuisine",
-      content: "Churma, Kadhi, Bajre ki Roti, and Matthe ki Chutney are specialties of Haryanvi cuisine. These dishes are a treasure of taste and nutrition.",
-      image: "https://images.unsplash.com/photo-1605197584281-ef57c21e46d3?q=80&w=2070"
+      title: "Cultural events",
+      content: "Fairs, festivals, and melas are an integral part of Haryanvi culture. These events bring people together to celebrate their traditions and heritage.",
+      image: "https://img.freepik.com/premium-photo/indian-cwopea-farming-farmer-holding-cwopea-hands-happy-farmer_898049-1024.jpg?ga=GA1.1.622402169.1739605743&semt=ais_hybrid"
     },
     {
-      title: "Rural Sports",
-      content: "Traditional sports like Kabaddi, Wrestling, and Gilli-Danda are an important part of Haryana's sporting culture and heritage.",
-      image: "https://images.unsplash.com/photo-1574230951624-b6c0de2166e9?q=80&w=2070"
+      title: "Crafts",
+      content: "Pottery, weaving, and metalwork are some of the traditional crafts of Haryana. These crafts showcase the creativity and skills of our artisans.",
+      image: "https://img.freepik.com/free-photo/woman-making-crafts-with-help-glue_114579-11503.jpg?ga=GA1.1.622402169.1739605743&semt=ais_hybrid"
     },
   ]
 
   return (
-    <div className="bg-gradient-to-b from-[#faf455] to-[#fff5b5] px-4 md:px-6 py-16 md:py-24">
+    <div id="programs" ref={ref} className="bg-gradient-to-b from-[#faf455] to-[#fff5b5] px-4 md:px-6 py-16 md:py-24">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 md:mb-16">
-          <h1 className="text-3xl md:text-4xl font-bold text-[#1e1e1e] mb-3 md:mb-4">Glimpses of Haryanvi Art</h1>
-          <p className="text-lg md:text-xl text-[#767676]">A showcase of our rich cultural heritage</p>
+          <motion.h1 
+            className="text-3xl md:text-4xl font-bold text-[#1e1e1e] mb-3 md:mb-4"
+            initial="hidden"
+            animate={controls}
+            variants={{
+              visible: { opacity: 1, y: 0 },
+              hidden: { opacity: 0, y: -20 }
+            }}
+            transition={{ duration: 0.5 }}
+          >
+            Glimpses of Haryanvi Art
+          </motion.h1>
+          <motion.p 
+            className="text-lg md:text-xl text-[#767676]"
+            initial="hidden"
+            animate={controls}
+            variants={{
+              visible: { opacity: 1 },
+              hidden: { opacity: 0 }
+            }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            A showcase of our rich cultural heritage
+          </motion.p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {cards.map((card, index) => (
-            <Card key={index} className="bg-white shadow-xl hover:shadow-2xl transition-shadow duration-300">
-              <CardContent className="p-0">
-                <div 
-                  className="h-48 w-full bg-cover bg-center"
-                  style={{ backgroundImage: `url(${card.image})` }}
-                />
-                <div className="p-4 md:p-6">
-                  <h2 className="text-xl md:text-2xl font-bold mb-2 md:mb-3 text-[#1e1e1e]">{card.title}</h2>
-                  <p className="text-[#767676] leading-relaxed text-sm md:text-base">{card.content}</p>
-                </div>
-              </CardContent>
-            </Card>
+            <motion.div
+              key={index}
+              initial="hidden"
+              animate={controls}
+              variants={{
+                visible: { opacity: 1, y: 0 },
+                hidden: { opacity: 0, y: 20 }
+              }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <Card className="bg-white shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                <CardContent className="p-0">
+                  <div 
+                    className="h-48 w-full bg-cover bg-center"
+                    style={{ 
+                      backgroundImage: `url(${card.image})`,
+                      backgroundSize: '400px 220px',
+                      backgroundRepeat: 'no-repeat',
+                      backgroundPosition: 'center'
+                    }}
+                  />
+                  <div className="p-4 md:p-6">
+                    <h2 className="text-xl md:text-2xl font-bold mb-2 md:mb-3 text-[#1e1e1e]">{card.title}</h2>
+                    <p className="text-[#767676] leading-relaxed text-sm md:text-base">{card.content}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
           ))}
         </div>
       </div>

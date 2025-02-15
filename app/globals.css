@@ -79,3 +79,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+.custom-image-height {
+  height: 420px; /* Adjust the height as needed */
+  object-fit: cover;
+}

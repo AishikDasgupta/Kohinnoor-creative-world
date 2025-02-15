@@ -19,7 +19,7 @@ export function Hero() {
       {/* Content */}
       <div className="relative z-10 pt-16 md:pt-32 text-center">
         <div className="max-w-4xl mx-auto px-4 md:px-6">
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-[#ffca1c] to-[#ebc419]">
+          <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-[#faca2c] to-[#ebc419]">
             Celebrating Haryanvi Art & Culture
           </h1>
           <p className="text-white text-lg md:text-xl mb-8 leading-relaxed">
