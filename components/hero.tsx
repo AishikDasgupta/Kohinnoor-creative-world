@@ -30,7 +30,7 @@ export function Hero() {
             Our Rich Heritage, Arts, and Traditions - A Unique Cultural Experience
             <span className="inline-block animate-bounce delay-300 ml-2">✨</span>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-4 sm:align-center">
             <Button 
               className="bg-white text-[#ff1c1c] hover:bg-gray-100 text-lg px-8 py-6 w-full sm:w-auto group transition-transform hover:scale-105"
               onClick={() => document.getElementById('programs')?.scrollIntoView({ behavior: 'smooth' })}
