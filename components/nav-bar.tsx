@@ -72,9 +72,9 @@ export function NavBar() {
             ))}
             <Button 
               className="bg-[#803093] text-white hover:bg-[#803093]/90 w-full"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={handleContactUsClick}
             >
-              Book Tickets
+              Contact Us
             </Button>
           </div>
         </div>
