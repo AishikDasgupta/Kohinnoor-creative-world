@@ -22,19 +22,19 @@ export function NavBar() {
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-white border-b-2 border-[#803093]/20">
+    <nav className="sticky top-0 z-50 bg-white border-b-2 border-[#803093]/20 h-35">
       <div className="flex items-center justify-between px-4 md:px-6 py-4">
         <Link href="/" className="flex items-center gap-2">
           <Image
             src={logo}
             alt="Kohinnoor creative world"
             width={124}
-            height={64}
+            height={84}
           />
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-9 text-lg">
           {navItems.map((item) => (
             <Link
               key={item.href}
