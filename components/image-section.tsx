@@ -4,10 +4,11 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 interface ImageSectionProps {
-  heading: string;
+  heading?: string;
   subheading?: string;
-  content: string;
+  content?: string;
   imageUrl: string;
+  imageclassName?: string;
   id: string;
 }
 
