@@ -7,6 +7,9 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Kohinnoor Creative World',
   description: 'Kohinnoor Creative is a platform for showcasing and celebrating Haryanvi art and culture.',
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
