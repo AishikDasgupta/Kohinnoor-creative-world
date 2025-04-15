@@ -50,11 +50,7 @@ export function Hero() {
         >
           <Button
             className="bg-[#7B1C90] hover:bg-[#7B1C90] text-white text-lg px-4 py-3 sm:px-8 sm:py-4 max-w-xs sm:max-w-none group transition-transform hover:scale-105 rounded-3xl font-serif"
-            onClick={() =>
-              document
-                .getElementById("programs")
-                ?.scrollIntoView({ behavior: "smooth" })
-            }
+            onClick={handleContactUsClick}
           >
             REGISTRATION FORM
           </Button>

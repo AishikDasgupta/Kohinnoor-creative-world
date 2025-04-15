@@ -21,7 +21,7 @@ export function NavBar() {
   ];
 
   const handleContactUsClick = () => {
-    window.location.href = "https://www.publicgoods.com/pages/contact";
+    window.location.href = "https://kcwform.lovable.app/";
   };
 
   return (
