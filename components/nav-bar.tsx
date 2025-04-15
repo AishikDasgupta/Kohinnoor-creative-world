@@ -11,10 +11,13 @@ export function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { href: "/", label: "Home" },
-    { href: "#programs", label: "Programs" },
+    { href: "#hero", label: "Home" },
+    { href: "#grid-layout", label: "Programs" },
     { href: "#mission", label: "Mission" },
     { href: "#vision", label: "Vision" },
+    { href: "#events", label: "Events" }, // Added
+    { href: "#aboutus", label: "About Us" }, // Added
+    { href: "#story", label: "Story" }, // Added
   ];
 
   const handleContactUsClick = () => {
@@ -48,7 +51,7 @@ export function NavBar() {
             className="bg-[#803093] text-white hover:text-[#803093] hover:bg-[#FAD10A]/90"
             onClick={handleContactUsClick}
           >
-            Contact Us
+            REGISTRATION FORM
           </Button>
         </div>
 
@@ -83,7 +86,7 @@ export function NavBar() {
               className="bg-[#803093] text-white hover:bg-[#803093]/90 w-full"
               onClick={handleContactUsClick}
             >
-              Contact Us
+              REGISTRATION FORM
             </Button>
           </div>
         </div>

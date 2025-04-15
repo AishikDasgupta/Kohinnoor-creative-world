@@ -1,12 +1,10 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { FaDrum, FaStar, FaMusic, FaFilm, FaGuitar, FaPaintBrush, FaTablets } from "react-icons/fa";
-import { GiKite, GiDramaMasks, GiPuppet, GiIndianPalace, GiFeather, GiTurban } from "react-icons/gi";
-import { MdTheaterComedy } from "react-icons/md";
-import { SiYoutubeshorts } from "react-icons/si";
-import { BsCameraReelsFill } from "react-icons/bs";
-import { BiMusic } from "react-icons/bi";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/lib/motion"; // Ensure this path is correct for your project
+import Image from "next/image";
+import hero_img from "public/hero_img.jpg";
 
 const handleContactUsClick = () => {
   window.location.href = "https://www.publicgoods.com/pages/contact";
@@ -14,60 +12,54 @@ const handleContactUsClick = () => {
 
 export function Hero() {
   return (
-    <div className="relative h-[80vh] sm:h-[90vh] flex flex-col justify-center items-center text-center px-4 sm:px-6">
-      {/* Solid Background */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[#803093]" />
+    <section
+      id="hero"
+      className="relative h-[50vh] sm:h-[90vh] flex flex-col justify-center items-center text-center px-4 sm:px-6 overflow-hidden"
+    >
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src={hero_img}
+          alt="Background"
+          layout="fill"
+          objectFit="cover" // ensures that the image covers the container nicely
+          quality={80}
+          priority
+        />
+        {/* Yellow Overlay */}
+        <div className="absolute inset-0 bg-[#FFE221] opacity-40" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto flex flex-col justify-center items-center">
-        <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-[#FAD10A] to-[#ebc419] mt-4 sm:mt-12">
-          Celebrating Haryanvi Art & Culture
-        </h1>
-        <p className="text-white text-lg sm:text-xl mb-14 sm:mb-8 leading-relaxed mt-2 sm:mt-6">
-          Our Rich Heritage, Arts, and Traditions - A Unique Cultural Experience
-          <span className="inline-block animate-bounce delay-300 ml-2">✨</span>
-        </p>
+      <motion.div
+        variants={fadeIn("up", 0.2)}
+        initial="hidden"
+        animate="show"
+        className="relative z-10 max-w-4xl mx-auto flex flex-col justify-center items-center px-4"
+      >
+        <motion.h1
+          variants={fadeIn("up", 0.4)}
+          className="text-4xl sm:text-6xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-[#7B1C90] to-[#7B1C90] mt-4 sm:mt-12 font-sans"
+        >
+          Haryana&apos;s <br /> Best Nritya Kalakaar
+        </motion.h1>
 
-        {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 justify-center items-center w-full">
+        <motion.div
+          variants={fadeIn("up", 0.8)}
+          className="flex flex-col sm:flex-row gap-6 sm:gap-8 justify-center items-center w-full mt-9"
+        >
           <Button
-            className="bg-white text-[#ff1c1c] hover:bg-gray-100 text-lg px-6 py-4 sm:px-8 sm:py-6 w-full sm:w-auto group transition-transform hover:scale-105"
-            onClick={() => document.getElementById("programs")?.scrollIntoView({ behavior: "smooth" })}
+            className="bg-[#7B1C90] hover:bg-[#7B1C90] text-white text-lg px-4 py-3 sm:px-8 sm:py-4 max-w-xs sm:max-w-none group transition-transform hover:scale-105 rounded-3xl font-serif"
+            onClick={() =>
+              document
+                .getElementById("programs")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
           >
-            View Programs
-            <span className="inline-block ml-2 group-hover:rotate-12 transition-transform">🎪</span>
+            REGISTRATION FORM
           </Button>
-          <Button
-            variant="outline"
-            className="bg-transparent text-white border-white hover:bg-white/20 text-lg px-6 py-4 sm:px-8 sm:py-6 w-full sm:w-auto group transition-transform hover:scale-105"
-            onClick={handleContactUsClick}
-          >
-            Join Us
-            <span className="inline-block ml-2 group-hover:rotate-12 transition-transform">🎭</span>
-          </Button>
-        </div>
-      </div>
-
-      {/* Floating Icons */}
-      <div className="absolute inset-0 pointer-events-none">
-        <GiKite className="text-white/50 text-4xl absolute top-10 left-[10%] animate-bounce" />
-        <FaDrum className="text-white/50 text-4xl absolute top-20 right-[15%] animate-bounce delay-100" />
-        <GiDramaMasks className="text-white/50 text-4xl absolute top-32 left-[25%] animate-pulse delay-200" />
-        <FaFilm className="text-white/50 text-3xl absolute top-16 right-[35%] animate-bounce delay-300" />
-        <GiPuppet className="text-white/50 text-4xl absolute bottom-32 left-[40%] animate-pulse delay-150" />
-        <FaGuitar className="text-white/50 text-3xl absolute bottom-24 right-[40%] animate-bounce delay-200" />
-        <GiIndianPalace className="text-white/50 text-4xl absolute top-[50%] left-[15%] animate-pulse delay-250" />
-        <MdTheaterComedy className="text-white/50 text-3xl absolute top-28 left-[45%] animate-bounce delay-150" />
-        <FaStar className="text-white/50 text-3xl absolute bottom-20 left-[20%] animate-pulse" />
-        <FaMusic className="text-white/50 text-3xl absolute bottom-10 right-[25%] animate-pulse delay-150" />
-        <GiFeather className="text-white/50 text-4xl absolute top-24 right-[50%] animate-bounce delay-200" />
-        <BiMusic className="text-white/50 text-4xl absolute bottom-28 right-[18%] animate-pulse delay-300" />
-        <GiTurban className="text-white/50 text-4xl absolute bottom-36 right-[32%] animate-bounce delay-225" />
-        <SiYoutubeshorts className="text-white/50 text-3xl absolute top-36 right-[22%] animate-pulse delay-275" />
-        <BsCameraReelsFill className="text-white/50 text-3xl absolute bottom-12 left-[32%] animate-bounce delay-325" />
-      </div>
-    </div>
+        </motion.div>
+      </motion.div>
+    </section>
   );
 }

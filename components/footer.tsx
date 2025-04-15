@@ -1,36 +1,34 @@
-"use client"
+"use client";
 
-import { Facebook, Instagram, Twitter, Youtube } from "lucide-react"
-import Link from "next/link"
-import Image from "next/image"
-import logo from "public/KohinnoorCreativeWorld.png"
+import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+import logo from "public/KohinnoorCreativeWorld.png";
 
 export function Footer() {
   return (
     <footer id="footer" className="bg-[#1e1e1e] text-white py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-            <div>
-            <Image src={logo} alt="Kohinnoor creative world" width={260} height={68} className="mb-4" />
-            </div>
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li><Link href="#mission" className="text-gray-400 hover:text-white text-sm md:text-base">About Us</Link></li>
-              <li><Link href="#programs" className="text-gray-400 hover:text-white text-sm md:text-base">Programs</Link></li>
-              <li><Link href="/gallery" className="text-gray-400 hover:text-white text-sm md:text-base">Gallery</Link></li>
-              <li><Link href="https://www.publicgoods.com/pages/contact" className="text-gray-400 hover:text-white text-sm md:text-base">Contact</Link></li>
-            </ul>
+            <Image
+              src={logo}
+              alt="Kohinnoor creative world"
+              width={260}
+              height={68}
+              className="mb-4"
+            />
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
             <p className="text-gray-400 text-sm md:text-base">
-              Panchkula, Haryana<br />
-              Phone: +91 98765-43210<br />
-              Email: info@kalaharyana.com
+              2106/7 HANUMAN COLONY,<br></br>
+               ROHTAK, HARYANA, 124001 <br></br>
+               PHONE: 7082392820<br></br>
+               EMAIL ID: kohinnoorcreativeworld@gmail.com
             </p>
           </div>
-          <div>
+          <div className="items-end">
             <h4 className="text-lg font-semibold mb-4">Social Media</h4>
             <div className="flex gap-4">
               <Facebook className="h-5 w-5 md:h-6 md:w-6 text-gray-400 hover:text-white cursor-pointer" />
@@ -45,5 +43,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

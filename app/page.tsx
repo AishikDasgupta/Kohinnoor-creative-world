@@ -1,30 +1,29 @@
-import { NavBar } from "../components/nav-bar"
-import { Hero } from "@/components/hero"
-import { ImageSection } from "@/components/image-section"
-import { GridLayout } from "../components/grid-layout"
-import { Footer } from "../components/footer"
-
+import { NavBar } from "../components/nav-bar";
+import { Hero } from "@/components/hero";
+import { SunDecor } from "@/components/slogan";
+import { GridLayout } from "../components/grid-layout";
+import { Footer } from "../components/footer";
+import UpcomingEvent from "@/components/events";
+import AboutUs from "@/components/aboutUs";
+import OurVision from "@/components/Vision";
+import OurStory from "@/components/Story";
 
 export default function Page() {
   return (
     <div className="min-h-screen">
       <NavBar />
       <Hero />
-      <ImageSection
-        heading="Our Mission"
-        subheading="Preserving and Promoting Haryanvi Culture"
-        content="At Kohinoor Creative World, our mission is to preserve, promote, and celebrate the rich cultural heritage of Haryana. We strive to create a vibrant platform that connects artists, performers, and cultural enthusiasts, fostering an environment where traditional art forms can flourish alongside contemporary expressions. Through events, workshops, and digital initiatives, we aim to make Haryanvi art and culture accessible to both local communities and global audiences."
-        imageUrl="https://thumbs.dreamstime.com/b/haryanvi-dance-8738687.jpg?w=768"
-        imageclassName="custom-image-height"
-        id="mission"
-      />
-      <ImageSection
-        imageUrl="https://thumbs.dreamstime.com/b/folk-music-dance-snake-charmers-haryana-india-was-shot-th-chandigarh-national-crafts-mela-kakagram-chandigarh-88681223.jpg?w=1400"
-        imageclassName="custom-image-height"
-        id="vision"
-      />
-      <GridLayout />
+      <div className="relative">
+        <SunDecor />
+        <GridLayout />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4 sm:px-8 lg:px-16 py-8">
+        <UpcomingEvent />
+        <AboutUs />
+        <OurVision />
+        <OurStory />
+        </div>
+      </div>
       <Footer />
     </div>
-  )
+  );
 }

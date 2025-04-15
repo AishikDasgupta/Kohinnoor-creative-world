@@ -1,117 +1,87 @@
-"use client"
+"use client";
 
-import { Card, CardContent } from "@/components/ui/card"
-import { motion, useAnimation } from "framer-motion"
-import { useEffect } from "react"
-import { useInView } from "react-intersection-observer"
+import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
+import slide1 from "public/slideshow_1.jpg";
+import slide2 from "public/slideshow_2.jpg";
+import slide3 from "public/slideshow_3.jpg";
 
 export function GridLayout() {
-  const controls = useAnimation()
-  const [ref, inView] = useInView({ triggerOnce: false })
+  const slides = [
+    {
+      image: slide1,
+      title: "THEATRE",
+      description:
+        "Swang, Nautanki, and Rasleela are popular forms of Haryanvi theatre. These performances entertain the audience about social issues and cultural values.",
+    },
+    {
+      image: slide2,
+      title: "FOLK DANCE",
+      description:
+        "Folk dances like Ghoomar and Dhamal celebrate Haryana's culture through energetic movements and vibrant costumes.",
+    },
+    {
+      image: slide3,
+      title: "CULTURAL FESTS",
+      description:
+        "Annual fests bring together diverse art forms and communities to preserve and celebrate regional traditions.",
+    },
+  ];
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [initialAnimationDone, setInitialAnimationDone] = useState(false);
+
+  // Auto-slide every 5 seconds
   useEffect(() => {
-    if (inView) {
-      controls.start("visible")
-    } else {
-      controls.start("hidden")
-    }
-  }, [controls, inView])
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [slides.length]);
 
-  const cards = [
-    {
-      title: "Music",
-      content: "Haryanvi music is a blend of traditional and contemporary styles. It includes folk songs, classical music, and modern tunes that reflect the vibrant culture of Haryana.",
-      image: "https://img.freepik.com/free-vector/colorful-maracas-musical-notes_1308-177271.jpg?ga=GA1.1.622402169.1739605743&semt=ais_hybrid"
-    },
-    {
-      title: "Dance",
-      content: "Haryanvi folk dances like Dhamal, Khoria, and Gugga are known for their rhythmic patterns and vibrant energy. These dances are the identity of our culture.",
-      image: "https://img.freepik.com/premium-vector/elegant-illustration-indian-classical-dancer-vibrant-costume-gracefully-capturing-tra_1151527-11748.jpg?ga=GA1.1.622402169.1739605743&semt=ais_hybrid"
-    },
-    {
-      title: "Art",
-      content: "Ghagra-Choli, Kurta-Pajama, and Phulkari embroidery are distinctive features of Haryanvi attire. They reflect the richness of our art and craftsmanship.",
-      image: "https://img.freepik.com/premium-photo/painting-woman-sitting-tree-with-flock-birds-background_792070-869.jpg?ga=GA1.1.622402169.1739605743&semt=ais_hybrid"
-    },
-    {
-      title: "Theatre",
-      content: "Swang, Nautanki, and Rasleela are popular forms of Haryanvi theatre. These performances entertain the audience about social issues and cultural values.",
-      image: "https://img.freepik.com/free-photo/young-kids-performing-play-theatre-stage-celebrate-world-theatre-day_23-2151163714.jpg?ga=GA1.1.622402169.1739605743&semt=ais_hybrid"
-    },
-    {
-      title: "Cultural events",
-      content: "Fairs, festivals, and melas are an integral part of Haryanvi culture. These events bring people together to celebrate their traditions and heritage.",
-      image: "https://img.freepik.com/premium-photo/indian-cwopea-farming-farmer-holding-cwopea-hands-happy-farmer_898049-1024.jpg?ga=GA1.1.622402169.1739605743&semt=ais_hybrid"
-    },
-    {
-      title: "Crafts",
-      content: "Pottery, weaving, and metalwork are some of the traditional crafts of Haryana. These crafts showcase the creativity and skills of our artisans.",
-      image: "https://img.freepik.com/free-photo/woman-making-crafts-with-help-glue_114579-11503.jpg?ga=GA1.1.622402169.1739605743&semt=ais_hybrid"
-    },
-  ]
+  const currentSlide = slides[currentIndex];
 
   return (
-    <div id="programs" ref={ref} className="bg-gradient-to-b from-[#FAD10A] to-[#ecd01b] px-4 md:px-6 py-16 md:py-24">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12 md:mb-16">
-          <motion.h1 
-            className="text-3xl md:text-4xl font-bold text-[#1e1e1e] mb-3 md:mb-4"
-            initial="hidden"
-            animate={controls}
-            variants={{
-              visible: { opacity: 1, y: 0 },
-              hidden: { opacity: 0, y: -20 }
-            }}
-            transition={{ duration: 0.5 }}
+    <motion.section
+      id="grid-layout"
+      className="bg-[#FFE221] px-0 py-0 overflow-hidden"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      onAnimationComplete={() => setInitialAnimationDone(true)}
+    >
+      {/* Slideshow */}
+      <div className="relative w-full">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentSlide.image.src}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+            className="w-full"
           >
-            Our Programs
-          </motion.h1>
-          <motion.p 
-            className="text-lg md:text-xl text-[#767676]"
-            initial="hidden"
-            animate={controls}
-            variants={{
-              visible: { opacity: 1 },
-              hidden: { opacity: 0 }
-            }}
-            transition={{ duration: 0.5, delay: 0.05 }}
-          >
-            Explore the diverse cultural programs that celebrate the art and heritage of Haryana.
-          </motion.p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {cards.map((card, index) => (
-            <motion.div
-              key={index}
-              initial="hidden"
-              animate={controls}
-              variants={{
-                visible: { opacity: 1, y: 0 },
-                hidden: { opacity: 0, y: 20 }
-              }}
-              transition={{ duration: 0.5, delay: index * 0.05 }}
-            >
-              <Card className="bg-white shadow-xl hover:shadow-2xl transition-shadow duration-300">
-                <CardContent className="p-0">
-                  <div 
-                    className="h-48 w-full bg-cover bg-center"
-                    style={{ 
-                      backgroundImage: `url(${card.image})`,
-                      backgroundSize: '400px 220px',
-                      backgroundRepeat: 'no-repeat',
-                      backgroundPosition: 'center'
-                    }}
-                  />
-                  <div className="p-4 md:p-6">
-                    <h2 className="text-xl md:text-2xl font-bold mb-2 md:mb-3 text-[#1e1e1e]">{card.title}</h2>
-                    <p className="text-[#767676] leading-relaxed text-sm md:text-base">{card.content}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
+            <Image
+              src={currentSlide.image}
+              alt={currentSlide.title}
+              width={1920}
+              height={1080}
+              className="w-full h-auto object-cover px-2 py-2 md:px-8 md:py-4"
+            />
+          </motion.div>
+        </AnimatePresence>
       </div>
-    </div>
-  )
+
+      {/* Text */}
+      <div className="pt-4 text-center px-4 md:px-8">
+        <h4 className="text-2xl font-bold text-[#7B1C90] mb-2 text-left sm:text-center font-sans">
+          {currentSlide.title}
+        </h4>
+        <p className="text-sm font-bold text-[#7B1C90] max-w-3xl mx-auto pb-4 sm:text-lg font-sans text-left">
+          {currentSlide.description}
+        </p>
+      </div>
+    </motion.section>
+  );
 }
