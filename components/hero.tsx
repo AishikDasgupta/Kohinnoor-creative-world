@@ -7,7 +7,7 @@ import Image from "next/image";
 import hero_img from "public/hero_img.jpg";
 
 const handleContactUsClick = () => {
-  window.location.href = "https://www.publicgoods.com/pages/contact";
+  window.location.href = "https://kcwform.lovable.app/";
 };
 
 export function Hero() {
