@@ -6,26 +6,40 @@ import { useEffect, useState } from "react";
 import slide1 from "public/slideshow_1.jpg";
 import slide2 from "public/slideshow_2.jpg";
 import slide3 from "public/slideshow_3.jpg";
+import slide4 from "public/slideshow_4.png";
+import slide5 from "public/slideshow_5.jpg";
 
 export function GridLayout() {
   const slides = [
     {
-      image: slide1,
+      image: slide4,
       title: "THEATRE",
       description:
-        "Swang, Nautanki, and Rasleela are popular forms of Haryanvi theatre. These performances entertain the audience about social issues and cultural values.",
+        "Swang, Nautanki, and Rasleela are popular forms of Haryanvi theatre. These performances entertain the audience about social issuHaryana’s cuisine is known for its simplicity and richness. Dishes like Bajra Khichdi, Sarson da Saag, and Makki di Roti are popular among localses and cultural values.",
     },
     {
       image: slide2,
-      title: "FOLK DANCE",
+      title: "FASHION",
       description:
-        "Folk dances like Ghoomar and Dhamal celebrate Haryana's culture through energetic movements and vibrant costumes.",
+        "Haryana’s traditional weaving and attire reflect its rich rural heritage. Ghagra-Choli, Kurta-Pajama, and chundari are distinctive features of Haryanvi attire.",
     },
     {
       image: slide3,
-      title: "CULTURAL FESTS",
+      title: "MUSIC",
       description:
-        "Annual fests bring together diverse art forms and communities to preserve and celebrate regional traditions.",
+        "Haryanvi music is a blend of traditional and contemporary styles. It includes folk songs, classical music, and modern tunes that reflect the vibrant culture of Haryana.",
+    },
+    {
+      image: slide5,
+      title: "DANCE",
+      description:
+        "Haryanvi folk dances like Dhamal, Khoria, and Gugga are known for their rhythmic patterns and vibrant energy. These dances are the identity of our culture.",
+    },
+    {
+      image: slide1,
+      title: "ART & CRAFT",
+      description:
+        "Haryana’s art and craft celebrate rural charm through pottery, handloom weaving, woodwork, and vibrant folk paintings rooted in tradition.",
     },
   ];
 

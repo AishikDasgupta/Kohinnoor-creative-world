@@ -10,7 +10,7 @@ const OurStory: React.FC = () => {
   return (
     <section id="story">
       {/* Main Wrapper */}
-      <div className="flex justify-center items-center sm:h-auto h-[20vh] px-4 mt-4">
+      <div className="flex justify-center items-center sm:h-auto h-[20vh] px-4 mt-1">
         <div
           className="cursor-pointer w-full sm:w-64 sm:flex sm:flex-col items-center transition-transform duration-300 hover:scale-105"
           onClick={() => setShowPopup(true)}
