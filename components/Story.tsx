@@ -65,7 +65,17 @@ const OurStory: React.FC = () => {
           Our Story
         </h2>
         <p className="text-sm text-gray-700 text-center">
-          Born from a shared passion and a vision to create something meaningful, our journey began with a spark and evolved into a movement. Through ups and downs, we stayed united, driven by purpose and heart.
+          The Vision Behind Kohinoor Creative WorldCreativity is as essential as
+          knowledge. This realization became deeply personal when my mother, a
+          dedicated teacher, shared a disheartening experience—a school drawing
+          competition was abruptly stopped because some parents deemed it
+          unimportant. It was a stark reminder of how art and culture are often
+          overlooked in our educational system. That moment sparked a vision—to
+          create a platform where creativity is not sidelined but celebrated.
+          Kohinoor Creative World emerged from this belief, dedicated to
+          promoting art, culture, and heritage while empowering young talent.
+          Every child deserves a stage. Every talent deserves recognition. And
+          we are here to make it happen.
         </p>
         <button
           className="mt-5 bg-purple-700 text-white px-4 py-2 rounded-lg hover:bg-purple-800 w-full transition duration-300"

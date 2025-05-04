@@ -8,7 +8,9 @@ const AboutUs: React.FC = () => {
   const [showPopup, setShowPopup] = useState(false);
 
   return (
-    <section id="aboutus"> {/* Added section with id */}
+    <section id="aboutus">
+      {" "}
+      {/* Added section with id */}
       {/* Main Wrapper */}
       <div className="flex justify-center items-center sm:h-auto h-[20vh] px-4 mt-4">
         <div
@@ -53,7 +55,6 @@ const AboutUs: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Popup */}
       <div
         className={`fixed bottom-0 left-0 w-full bg-yellow-300 rounded-t-2xl p-6 z-50 transition-all duration-500 ease-in-out ${
@@ -64,7 +65,16 @@ const AboutUs: React.FC = () => {
           About Us
         </h2>
         <p className="text-sm text-gray-700 text-center">
-          We are passionate individuals working together to bring impactful events to life. Our goal is to foster creativity, culture, and community engagement.
+          Kohinnoor Creative World is an initiative to explore and celebrate the
+          creative legacy of Haryana and its rich folk culture. We aim to
+          preserve and promote artistic traditions while providing a platform
+          for emerging talent. We organize competitive events and workshops
+          across various creative fields including Dance, Music, Story telling,
+          Fashion design, Visual & Performing arts, offering artists
+          opportunities to showcase their skills, learn from experts, and grow
+          professionally. Our mission is to blend heritage with modern
+          creativity, ensuring that Haryana&apos;s artistic spirit continues to
+          thrive on a larger stage.
         </p>
         <button
           className="mt-5 bg-purple-700 text-white px-4 py-2 rounded-lg hover:bg-purple-800 w-full"

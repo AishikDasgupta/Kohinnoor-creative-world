@@ -8,7 +8,9 @@ const OurVision: React.FC = () => {
   const [showPopup, setShowPopup] = useState(false);
 
   return (
-    <section id="vision"> {/* Added section with id */}
+    <section id="vision">
+      {" "}
+      {/* Added section with id */}
       {/* Main Wrapper */}
       <div className="flex justify-center items-center sm:h-auto h-[20vh] px-4 mt-4">
         <div
@@ -54,7 +56,6 @@ const OurVision: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Popup */}
       <div
         className={`fixed bottom-0 left-0 w-full bg-yellow-300 rounded-t-2xl p-6 z-50 transition-all duration-500 ease-in-out ${
@@ -65,7 +66,21 @@ const OurVision: React.FC = () => {
           Our Vision
         </h2>
         <p className="text-sm text-gray-700 text-center">
-          To build a thriving and inclusive community by fostering creativity, collaboration, and growth through meaningful experiences and impactful initiatives.
+          At Kohinnoor Creative World, our vision is to make Haryana a
+          powerhouse of artistic talent, just as it has earned global
+          recognition in sports. We believe that every artist—whether adancer,
+          singer, painter, or performer—deserves a platform to showcase their
+          talent and achieve their dreams. Our goal is to create an ecosystem
+          where young artists receive the right exposure, mentorship, and
+          opportunities to grow. By organizing high-quality competitions,
+          events, and collaborations, we aim to bridge the gap between raw
+          talent and professional success. We envision a future where every
+          aspiring artist in Haryana sees a clear path to recognition and
+          growth. Through our initiatives, we not only promote talent but also
+          inspire the next generation to embrace creativity as a powerful career
+          choice. At Kohinnoor Creative World, we are not just building a stage;
+          we are building a movement—one that empowers artists and transforms
+          Haryana into a cultural hub of artistic brilliance.
         </p>
         <button
           className="mt-5 bg-purple-700 text-white px-4 py-2 rounded-lg hover:bg-purple-800 w-full"
