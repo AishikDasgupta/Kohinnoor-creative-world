@@ -13,7 +13,7 @@ export function NavBar() {
   const navItems = [
     { href: "#hero", label: "Home" },
     { href: "#grid-layout", label: "Programs" },
-    { href: "#mission", label: "Mission" },
+    // { href: "#mission", label: "Mission" },
     { href: "#vision", label: "Vision" },
     { href: "#events", label: "Events" }, // Added
     { href: "#aboutus", label: "About Us" }, // Added
