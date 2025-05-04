@@ -64,6 +64,17 @@ const UpcomingEvent: React.FC = () => {
           showPopup ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
         }`}
       >
+        {/* Added logo */}
+        <div className="flex justify-center mb-4">
+          <Image
+            src="https://kcwform.lovable.app/HBNK_LOGO.png" // Adjust the path if necessary
+            alt="Kohinnoor Creative World Logo"
+            width={130}
+            height={100}
+            className="rounded-full"
+          />
+        </div>
+
         <div className="text-left text-sm text-gray-800 space-y-4">
           <h2 className="text-xl font-bold text-purple-800 text-center">
             Haryana’s Best Nritya Kalakaar – Unleash Your Dance Talent!
