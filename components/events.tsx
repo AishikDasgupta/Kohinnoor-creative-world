@@ -41,7 +41,7 @@ const UpcomingEvent: React.FC = () => {
           </div>
 
           {/* Desktop layout: image on top, text below */}
-          <div className="hidden sm:flex flex-col items-center bg-[#FFE221] rounded-xl shadow-md p-4 space-y-4 sm:mt-4 hover:bg-yellow-300 transition duration-300">
+          <div className="hidden sm:flex flex-col items-center bg-[#FFE221] rounded-xl shadow-md p-4 space-y-4 sm:mt-2 hover:bg-yellow-300 transition duration-300">
             {/* Image */}
             <div className="w-32 h-32 rounded-full overflow-hidden">
               <Image
